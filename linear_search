@@ -1,0 +1,41 @@
+#   Linear search
+
+#   Compare the item at the current position to the search item
+
+#   If the item is equal, then stop searching
+
+#   Otherwise, search the next list item
+
+# Task - Given the list of names and corresponding exam scores, implement a linear search algorithm to find the score
+# of a specific student
+
+
+student_data = [
+    {"name": "Alice", "score": 85},
+    {"name": "Bob", "score": 92},
+    {"name": "Charlie", "score": 78},
+    {"name": "David", "score": 65},
+    {"name": "Emma", "score": 88},
+    {"name": "Frank", "score": 95},
+    {"name": "Grace", "score": 75},
+    {"name": "Helen", "score": 80},
+    {"name": "Ivan", "score": 91},
+    {"name": "Jack", "score": 70},
+]
+
+student = input("Please enter the students name: ")
+
+
+def linearSearch(data, name):
+    for x in data:
+        if x["name"] == name:
+            print(f"{name}'s score is {x['score']}")
+            return
+
+    print("student not found")
+
+
+linearSearch(student_data, student)
+
+# Time complexity O(n) as worst case scenario, linear search algorithm would iterate through the entire list before
+# finding or ruling out a match
